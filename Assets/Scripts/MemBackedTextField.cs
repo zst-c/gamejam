@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MemBackedTextField : MonoBehaviour{
 	
@@ -11,6 +12,11 @@ public class MemBackedTextField : MonoBehaviour{
 	public int x;
 	
 	private void OnGUI(){
+		if (SceneManager.GetSceneAt(SceneManager.sceneCount - 1) != gameObject.scene)
+		{
+			return;
+		}
+
 		const int width = 700, height = 40;
 		GUIStyle style = new(GUI.skin.textField){
 			font = font,
