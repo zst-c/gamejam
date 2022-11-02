@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         Vector2 moveInput = new(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if (!isMoving && Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
         {
-            Debug.Log("MOOVE");
+            StartCoroutine(MovePlayer(moveInput));
         }
     }
 
@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
     {
         
     }
-
     IEnumerator MovePlayer(Vector2 direction)
     {
         isMoving = true;
