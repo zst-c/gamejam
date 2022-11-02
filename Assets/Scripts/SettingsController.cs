@@ -1,16 +1,43 @@
-﻿using System;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SettingsController : MonoBehaviour
 {
-    private int _brightness;
-    public Text brightness;
+    public Slider volumeSlider;
+    public TextMeshProUGUI volumeMeter;
 
-    public void Update()
+    public Slider brightnessSlider;
+    public TextMeshProUGUI brightnessMeter;
+
+    public void Start()
     {
-        brightness.text = $"{_brightness}/100";
+        SettingsManager.Instance.Volume = (int)volumeSlider.value;
+        volumeSlider.onValueChanged.AddListener(delegate(float value)
+        {
+            SettingsManager.Instance.Volume = (int)value;
+            UpdateText();
+        });
+
+        SettingsManager.Instance.Brightness = (int)brightnessSlider.value;
+        brightnessSlider.onValueChanged.AddListener(delegate(float value)
+        {
+            SettingsManager.Instance.Brightness = (int)value;
+            UpdateText();
+        });
+
+        UpdateText();
     }
 
-    public void SetBrightness() {}
+    private void UpdateText()
+    {
+        var settings = SettingsManager.Instance;
+        volumeMeter.text = GetProgress(settings.Volume);
+        brightnessMeter.text = GetProgress(settings.Brightness);
+    }
+
+    private static string GetProgress(float value)
+    {
+        return $"{(int)value}/100";
+    }
 }

@@ -535,6 +535,7 @@ GameObject:
   - component: {fileID: 314519591}
   - component: {fileID: 314519593}
   - component: {fileID: 314519592}
+  - component: {fileID: 314519594}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -611,6 +612,22 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 20
   m_LayoutPriority: 0
+--- !u!114 &314519594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314519590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfe46cb12e14095a5262e53a020cae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 358052182}
+  volumeMeter: {fileID: 628368638}
+  brightnessSlider: {fileID: 1424724782}
+  brightnessMeter: {fileID: 235031473}
 --- !u!1 &358052179
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,19 +740,7 @@ MonoBehaviour:
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &367499882
 GameObject:
   m_ObjectHideFlags: 0
