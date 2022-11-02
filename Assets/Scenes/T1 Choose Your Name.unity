@@ -244,6 +244,7 @@ MonoBehaviour:
   memory: {fileID: 2137261228}
   ptr: 0
   font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+  x: -90
 --- !u!114 &2395899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,9 +260,10 @@ MonoBehaviour:
   memory: {fileID: 2137261228}
   ptr: 16
   length: 2
-  x: 100
+  x: -30
   y: 100
   initialText: OK
+  font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
 --- !u!114 &2395900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,9 +279,10 @@ MonoBehaviour:
   memory: {fileID: 2137261228}
   ptr: 18
   length: 6
-  x: -100
+  x: -230
   y: 100
   initialText: Cancel
+  font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
 --- !u!114 &2395901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,7 +476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: -90, y: 100}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372186134

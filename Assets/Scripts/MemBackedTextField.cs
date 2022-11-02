@@ -8,13 +8,15 @@ public class MemBackedTextField : MonoBehaviour{
 	public int ptr;
 
 	public Font font;
+	public int x;
 	
 	private void OnGUI(){
 		const int width = 700, height = 40;
 		GUIStyle style = new(GUI.skin.textField){
-			font = font
+			font = font,
+			alignment = TextAnchor.MiddleCenter
 		};
-		text = GUI.TextField(new Rect((Screen.width - width) / 2f, (Screen.height - height) / 2f, width, height), text, 48, style);
+		text = GUI.TextField(new Rect((Screen.width - width) / 2f + x, (Screen.height - height) / 2f, width, height), text, 48, style);
 		byte[] newData = System.Text.Encoding.ASCII.GetBytes(text);
 		memory.ChangeMemory(() => {
 			memory.memory[0] = (byte)text.Length;
