@@ -10,8 +10,12 @@ public class SettingsController : MonoBehaviour
     public Slider brightnessSlider;
     public TextMeshProUGUI brightnessMeter;
 
+    public Button resumeButton;
+
     private void Start()
     {
+        resumeButton.Select();
+
         SettingsManager.Instance.Volume = (int)volumeSlider.value;
         volumeSlider.onValueChanged.AddListener(delegate(float value)
         {

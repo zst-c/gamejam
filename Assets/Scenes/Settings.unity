@@ -628,6 +628,7 @@ MonoBehaviour:
   volumeMeter: {fileID: 628368638}
   brightnessSlider: {fileID: 1424724782}
   brightnessMeter: {fileID: 235031473}
+  resumeButton: {fileID: 1549171649}
 --- !u!1 &358052179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,7 +2150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: -1
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2927,7 +2928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1549171647}
+  m_FirstSelected: {fileID: 358052179}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1570383489
