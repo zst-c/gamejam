@@ -10,7 +10,7 @@ public class SettingsController : MonoBehaviour
     public Slider brightnessSlider;
     public TextMeshProUGUI brightnessMeter;
 
-    public void Start()
+    private void Start()
     {
         SettingsManager.Instance.Volume = (int)volumeSlider.value;
         volumeSlider.onValueChanged.AddListener(delegate(float value)
@@ -39,5 +39,15 @@ public class SettingsController : MonoBehaviour
     private static string GetProgress(float value)
     {
         return $"{(int)value}/100";
+    }
+
+    public void Close()
+    {
+        Navigator.Instance.ToggleSettings();
+    }
+
+    public void ExitToMainMenu()
+    {
+        Navigator.Instance.ExitToMainMenu();
     }
 }
