@@ -60,3 +60,6 @@ crashlytics-build.properties
 
 # .vsconfig files
 .vsconfig
+
+# ignore EditorUserSettings
+UserSettings/EditorUserSettings.asset
