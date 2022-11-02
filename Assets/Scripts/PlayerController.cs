@@ -1,4 +1,6 @@
 // using System.Collections;
+
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -53,8 +55,10 @@ public class PlayerController : MonoBehaviour
         if (Vector3.Distance(transform.position, movePoint.position) <= 0.05f)
         {
             // temporary
-            memory.memory[0] = (byte)transform.position.x;
-            memory.memory[1] = (byte)transform.position.y;
+            memory.ChangeMemory(() => {
+                memory.memory[0] = (byte)transform.position.x;
+                memory.memory[1] = (byte)transform.position.y;
+            });
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1)
             {
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0), .2f, whatLayerStopsMovement))
