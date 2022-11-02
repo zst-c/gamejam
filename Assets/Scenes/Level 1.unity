@@ -4156,7 +4156,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341748914
 GameObject:
@@ -5530,7 +5530,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &462629082
 GameObject:
@@ -7911,24 +7911,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &591248191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591248190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c774f359f55c42c43869d2badb7d1b89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMovementSpeed: 5
-  movePoint: {fileID: 18053638}
-  whatLayerStopsMovement:
-    serializedVersion: 2
-    m_Bits: 512
-  memory: {fileID: 457196450}
 --- !u!212 &591248192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8014,6 +7996,7 @@ MonoBehaviour:
   whatLayerStopsMovement:
     serializedVersion: 2
     m_Bits: 512
+  memory: {fileID: 457196450}
 --- !u!95 &591248196
 Animator:
   serializedVersion: 4
@@ -12617,7 +12600,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
