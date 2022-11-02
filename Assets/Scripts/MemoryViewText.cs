@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MemoryViewText : MonoBehaviour{
 	public GameMemory memory;
 
 	private void OnGUI(){
+		if(SceneManager.GetSceneAt(SceneManager.sceneCount - 1) != gameObject.scene){
+			return;
+		}
+		
 		var width = 8 * 28 + 14;
 		var height = 32 * 24 + 12;
 		int baseX = Screen.width - width, baseY = 24;

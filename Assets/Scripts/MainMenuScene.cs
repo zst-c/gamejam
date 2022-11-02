@@ -4,7 +4,7 @@
     {
         public void StartGame()
         {
-            Navigator.Instance.LoadScene(Scenes.Level1Scene);
+            Navigator.Instance.LoadScene(Scenes.TutorialScene);
         }
 
         public void OpenSettings()

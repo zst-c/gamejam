@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Persistent Scene.unity
     guid: 28f60cf7ab017974a9c1ea9777501c80
   - enabled: 1
+    path: Assets/Scenes/T1 Choose Your Name.unity
+    guid: 4e8f462e81d068c49ad1c666182f9977
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 2a194a9b825f8164f8d254e521b35ce7
   - enabled: 1

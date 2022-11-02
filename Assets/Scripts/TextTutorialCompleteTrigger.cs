@@ -8,6 +8,6 @@ public class TextTutorialCompleteTrigger : MonoBehaviour{
 	
 	private void Update(){
 		if(memory.memory[ptr] != 0)
-			SceneManager.LoadScene("Level 1");
+			Navigator.Instance.LoadScene("Level 1");
 	}
 }
