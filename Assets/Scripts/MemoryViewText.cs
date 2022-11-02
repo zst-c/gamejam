@@ -4,10 +4,12 @@ public class MemoryViewText : MonoBehaviour{
 	public GameMemory memory;
 
 	private void OnGUI(){
-		int baseX = 16, baseY = 16;
+		var width = 16 * 28 + 14;
+		var height = 16 * 24 + 12;
+		int baseX = Screen.width - width, baseY = Screen.height - height;
 		// rows of 32
 		GUI.color = Color.black;
-		GUI.Box(new Rect(baseX - 14, baseY - 8, 16 * 28 + 14, 16 * 24 + 12), "");
+		GUI.Box(new Rect(baseX - 14, baseY - 8, width, height), "");
 		for(int x = 0; x < 16; x++){
 			for(int y = 0; y < 16; y++){
 				var idx = x + y * 16;
