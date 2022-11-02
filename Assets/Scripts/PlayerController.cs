@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
         // {
         //     StartCoroutine(MovePlayer(moveInput));
         // }
+
+        // Scuff implementation but it works I guess
         if (!isMoving)
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -39,11 +41,6 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(MovePlayer(Vector2.right));
             }
         }
-    }
-
-    void FixedUpdate()
-    {
-
     }
 
     IEnumerator MovePlayer(Vector2 direction)
