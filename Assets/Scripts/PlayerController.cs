@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
     IEnumerator MovePlayer(Vector2 direction)
     {
         isMoving = true;
