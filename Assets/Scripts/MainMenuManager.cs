@@ -17,7 +17,7 @@ public class MainMenuManager : MonoBehaviour
         
     }
 
-    public void StartGame() { SceneManager.LoadScene("Level 1", LoadSceneMode.Single); }
+    public void StartGame() { SceneManager.LoadScene("T1 Choose Your Name", LoadSceneMode.Single); }
 
-    public void LoadSettings() { SceneManager.LoadScene("Settings", LoadSceneMode.Single); }
+    public void LoadSettings() { SceneManager.LoadScene("Settings", LoadSceneMode.Additive); }
 }
