@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         
     }
-
+//fdhuifysubbyreuibsysrbyrisbvtreyisbvter
     IEnumerator MovePlayer(Vector2 direction)
     {
         isMoving = true;
