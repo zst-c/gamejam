@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MainMenuScene : MonoBehaviour
@@ -13,7 +12,7 @@ public class MainMenuScene : MonoBehaviour
 
     public void StartGame()
     {
-        Navigator.Instance.LoadScene(Scenes.NameScene);
+        Navigator.Instance.LoadScene(Scenes.Level2Scene);
     }
 
     public void OpenSettings()
