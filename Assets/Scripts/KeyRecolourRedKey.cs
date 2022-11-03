@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-public class KeyRecolourScript : MonoBehaviour{
+public class KeyRecolourRedKey : MonoBehaviour{
 	
 	// convert this to red/green key based on brightness
 	private void Update(){
@@ -9,6 +9,7 @@ public class KeyRecolourScript : MonoBehaviour{
 			var greenKey = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Full Green Key.prefab");
 			greenKey.transform.parent = gameObject.transform.parent;
 			greenKey.transform.position = gameObject.transform.position;
+			greenKey.transform.localScale = gameObject.transform.localScale;
 			Destroy(gameObject);
 		}
 	}
