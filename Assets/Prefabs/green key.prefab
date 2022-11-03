@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7293093730790932708}
   - component: {fileID: 7293093730790932710}
   - component: {fileID: 1742729399}
+  - component: {fileID: 4960760985080355251}
   m_Layer: 0
   m_Name: green key
   m_TagString: Pickupabble
@@ -113,3 +114,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Colour: Green
+--- !u!114 &4960760985080355251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7293093730790932707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f1838bc8418104f83a35e33247ab84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-public class KeyRecolourScript : MonoBehaviour{
+public class KeyRecolourRedKey : MonoBehaviour{
 	
 	// convert this to red/green key based on brightness
 	private void Update(){
