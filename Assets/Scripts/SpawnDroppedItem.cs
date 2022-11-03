@@ -13,6 +13,7 @@ public class SpawnDroppedItem : MonoBehaviour
     public void SpawnItem()
     {
         Vector2 spawnPos = new Vector2(player.position.x, player.position.y + 1);
-        Instantiate(item, spawnPos, Quaternion.identity);
+        GameObject obj = Instantiate(item, spawnPos, Quaternion.identity);
+        obj.GetComponent<Key>()?.CheckUnlock();
     }
 }
