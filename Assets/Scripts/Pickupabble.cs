@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pickupabble : MonoBehaviour
 {
@@ -31,7 +32,11 @@ public class Pickupabble : MonoBehaviour
                 }
                 else
                 {
-                    // DO THE OVERFLOW
+                    Debug.Log("FULL");
+                    if (SceneManager.GetActiveScene().name == "Level 1" && FindObjectOfType<GoblinHealthBar>() != null)
+                    {
+                        FindObjectOfType<GoblinHealthBar>().GoblinHurt();
+                    }
                     Destroy(gameObject);
                 }
             }
