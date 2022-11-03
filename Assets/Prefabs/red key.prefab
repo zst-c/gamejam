@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7293093730790932709}
   - component: {fileID: 7293093730790932708}
   - component: {fileID: 7293093730790932710}
+  - component: {fileID: 1742729399}
   m_Layer: 0
   m_Name: red key
   m_TagString: Pickupabble
@@ -99,3 +100,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupSfx: {fileID: 8936982765784624549, guid: 443a08781d2d8cf49a0bccacaa33885b, type: 3}
   itemButton: {fileID: 2453478868435824538, guid: 207b101dc4b5f9d40a64a77dac2f4df2, type: 3}
+--- !u!114 &1742729399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7293093730790932707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d52d71dd1a746a181197c126d7051a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Colour: Red
