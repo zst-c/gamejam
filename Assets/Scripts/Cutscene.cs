@@ -12,6 +12,16 @@ public class Cutscene : MonoBehaviour
         StartCoroutine(ExampleCoroutine());
     }
 
+    private void Update()
+    {
+#if (UNITY_EDITOR)
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Navigator.Instance.LoadScene(Scenes.MainMenuScene);
+        }
+#endif
+    }
+
     IEnumerator ExampleCoroutine()
     {
         yield return new WaitForSeconds(timeToNextScene);
