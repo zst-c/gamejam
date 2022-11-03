@@ -179,9 +179,13 @@ PrefabInstance:
       value: MusicPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 6968931909890521895, guid: 835a57d63f40983409fa6b5a9880d911, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968931909890521895, guid: 835a57d63f40983409fa6b5a9880d911, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 11741f6ee4b9b7b46addbb713f3ac28b, type: 3}
+      objectReference: {fileID: 8300000, guid: b182bf65c02deb045951d31eb03fde3d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 835a57d63f40983409fa6b5a9880d911, type: 3}
 --- !u!1 &375644907
@@ -922,3 +926,20 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &2123550788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6968931909890521894, guid: 835a57d63f40983409fa6b5a9880d911, type: 3}
+  m_PrefabInstance: {fileID: 253932146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2123550791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123550788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ff7c79ef528ea4b95291a5bafad255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
