@@ -38,11 +38,11 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetBool("isMoving", true);
         }
 
-        playerAnimator.SetFloat("Horizontal", movement.x);
-        playerAnimator.SetFloat("Vertical", movement.y);
         playerAnimator.SetFloat("Speed", movement.sqrMagnitude);
         if (Mathf.Abs(movement.x) == 1 || Mathf.Abs(movement.y) == 1)
         {
+            playerAnimator.SetFloat("Horizontal", movement.x);
+            playerAnimator.SetFloat("Vertical", movement.y);
             playerAnimator.SetFloat("LastHorizontal", movement.x);
             playerAnimator.SetFloat("LastVertical", movement.y);
         }
