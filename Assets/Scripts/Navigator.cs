@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public static class Scenes
 {
     public const string MainMenuScene = "Main Menu";
+    public const string NewGameScene = "NewGameScene";
     public const string Level1Scene = "Level 1";
 }
 
@@ -21,12 +22,6 @@ public class Navigator
         get => _instance ??= new Navigator();
         private set => _instance = value;
     }
-
-    // public void StartNavigator()
-    // {
-    //     _sceneStack.Push(PersistentSceneName);
-    //     SceneManager.LoadScene(PersistentSceneName, LoadSceneMode.Single);
-    // }
 
     private readonly Stack<string> _sceneStack = new();
 

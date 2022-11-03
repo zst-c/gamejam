@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -10,7 +9,7 @@ public class MemBackend
     private readonly List<MemCell> _cells;
     private readonly GridLayoutGroup _grid;
 
-    public MemBackend(string[] labels, GridLayoutGroup grid, TMP_FontAsset font)
+    public MemBackend(IEnumerable<string> labels, GridLayoutGroup grid, TMP_FontAsset font)
     {
         _cells = labels.Select(label => new MemCell(label, 0)).ToList();
         _grid = grid;
