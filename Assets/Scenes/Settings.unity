@@ -640,6 +640,7 @@ GameObject:
   - component: {fileID: 358052180}
   - component: {fileID: 358052182}
   - component: {fileID: 358052181}
+  - component: {fileID: 358052183}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -741,7 +742,33 @@ MonoBehaviour:
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 358052183}
+        m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &358052183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358052179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1821c78e87bcc4bb1fc026beba304f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxButtonHighlight: {fileID: 7030256248376843842, guid: 6b682321d5a7447428227ee08f3e0a37, type: 3}
+  sfxButtonClick: {fileID: 7533822388419498217, guid: 9d8fd361535e63b4aabe3f39c069f964, type: 3}
 --- !u!1 &367499882
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,6 +2280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1258733681}
   - component: {fileID: 1258733682}
+  - component: {fileID: 1258733683}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -2327,8 +2355,34 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1258733683}
+        m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
+--- !u!114 &1258733683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258733680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1821c78e87bcc4bb1fc026beba304f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxButtonHighlight: {fileID: 7030256248376843842, guid: 6b682321d5a7447428227ee08f3e0a37, type: 3}
+  sfxButtonClick: {fileID: 7533822388419498217, guid: 9d8fd361535e63b4aabe3f39c069f964, type: 3}
 --- !u!1 &1276108067
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,6 +2784,7 @@ GameObject:
   - component: {fileID: 1424724780}
   - component: {fileID: 1424724782}
   - component: {fileID: 1424724781}
+  - component: {fileID: 1424724783}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -2831,7 +2886,33 @@ MonoBehaviour:
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1424724783}
+        m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1424724783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424724779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1821c78e87bcc4bb1fc026beba304f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxButtonHighlight: {fileID: 7030256248376843842, guid: 6b682321d5a7447428227ee08f3e0a37, type: 3}
+  sfxButtonClick: {fileID: 7533822388419498217, guid: 9d8fd361535e63b4aabe3f39c069f964, type: 3}
 --- !u!1 &1547219975
 GameObject:
   m_ObjectHideFlags: 0
