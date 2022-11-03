@@ -63,3 +63,6 @@ crashlytics-build.properties
 
 # ignore EditorUserSettings
 UserSettings/EditorUserSettings.asset
+
+# UserSettings
+UserSettings/Layouts/CurrentMaximizeLayout.dwlt

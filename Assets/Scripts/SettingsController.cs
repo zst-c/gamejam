@@ -10,20 +10,19 @@ public class SettingsController : MonoBehaviour
     public Slider brightnessSlider;
     public TextMeshProUGUI brightnessMeter;
 
-    public Button resumeButton;
+
+    public Toggle debug;
 
     private void Start()
     {
-        resumeButton.Select();
-
-        SettingsManager.Instance.Volume = (int)volumeSlider.value;
+        volumeSlider.GetComponent<Slider>().value = SettingsManager.Instance.Volume;
         volumeSlider.onValueChanged.AddListener(delegate(float value)
         {
             SettingsManager.Instance.Volume = (int)value;
             UpdateText();
         });
 
-        SettingsManager.Instance.Brightness = (int)brightnessSlider.value;
+        brightnessSlider.GetComponent<Slider>().value = SettingsManager.Instance.Brightness;
         brightnessSlider.onValueChanged.AddListener(delegate(float value)
         {
             SettingsManager.Instance.Brightness = (int)value;
@@ -31,6 +30,14 @@ public class SettingsController : MonoBehaviour
         });
 
         UpdateText();
+
+        debug.GetComponent<Toggle>().isOn = SettingsManager.Instance.Debug;
+        debug.onValueChanged.AddListener(delegate(bool isChecked){
+            SettingsManager.Instance.Debug = isChecked;
+            debug.GetComponent<Toggle>().isOn = SettingsManager.Instance.Debug;
+        });
+
+        volumeSlider.Select();
     }
 
     private void UpdateText()

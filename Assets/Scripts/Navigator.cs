@@ -18,6 +18,8 @@ public class Navigator
 
     private GameObject selectedInput;
 
+    private SettingsManager settingsManager = SettingsManager.Instance;
+
     private static Navigator _instance;
 
     public static Navigator Instance
