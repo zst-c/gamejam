@@ -54,7 +54,7 @@ public class NewGameScene : MemoryScene
         }
 
         if (byteIndex >= 4 && text.Length % MemCell.BitsLen != 0)
-            Navigator.Instance.LoadScene(Scenes.Level1Scene);
+            Navigator.Instance.LoadScene(Scenes.Level2Scene);
     }
 
     private string Substring(string s, int cellIndex)
