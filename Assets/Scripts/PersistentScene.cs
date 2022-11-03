@@ -5,7 +5,7 @@ public class PersistentScene : MonoBehaviour
 {
     private void Start()
     {
-        Navigator.Instance.LoadScene(Scenes.Cutscene);
+        Navigator.Instance.LoadScene(Scenes.Level2Scene);
         InputSystem.DisableDevice(Mouse.current);
         Cursor.visible = false;
     }
