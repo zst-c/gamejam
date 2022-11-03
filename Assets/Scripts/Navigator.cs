@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public static class Scenes
 {
@@ -14,6 +15,8 @@ public class Navigator
 {
     private const string PersistentSceneName = "Persistent Scene";
     private const string SettingsSceneName = "Settings";
+
+    private GameObject selectedInput;
 
     private static Navigator _instance;
 
@@ -49,6 +52,8 @@ public class Navigator
 
     private void OpenSettings()
     {
+        selectedInput = EventSystem.current.currentSelectedGameObject;
+        Time.timeScale = 0;
         _sceneStack.Push(SettingsSceneName);
         SceneManager.LoadScene(SettingsSceneName, LoadSceneMode.Additive);
     }
@@ -57,6 +62,8 @@ public class Navigator
     {
         _sceneStack.Pop();
         SceneManager.UnloadSceneAsync(SettingsSceneName);
+        EventSystem.current.SetSelectedGameObject(selectedInput);
+        Time.timeScale = 1;
     }
 
     public void ExitToMainMenu()
