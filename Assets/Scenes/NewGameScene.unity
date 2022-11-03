@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 190699997}
   - component: {fileID: 190699996}
   - component: {fileID: 190699995}
+  - component: {fileID: 190699998}
   m_Layer: 5
   m_Name: ButtonCancel
   m_TagString: Untagged
@@ -314,7 +315,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 190699996}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 190699998}
+        m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &190699996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +366,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190699993}
   m_CullTransparentMesh: 1
+--- !u!114 &190699998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190699993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1821c78e87bcc4bb1fc026beba304f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxButtonHighlight: {fileID: 7030256248376843842, guid: 6b682321d5a7447428227ee08f3e0a37, type: 3}
+  sfxButtonClick: {fileID: 7533822388419498217, guid: 9d8fd361535e63b4aabe3f39c069f964, type: 3}
 --- !u!1 &207100024
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1500,7 @@ GameObject:
   - component: {fileID: 1331347429}
   - component: {fileID: 1331347428}
   - component: {fileID: 1331347427}
+  - component: {fileID: 1331347430}
   m_Layer: 5
   m_Name: ButtonOk
   m_TagString: Untagged
@@ -1544,7 +1572,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1331347428}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1331347430}
+        m_TargetAssemblyTypeName: ButtonSounds, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1331347428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1583,6 +1623,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331347425}
   m_CullTransparentMesh: 1
+--- !u!114 &1331347430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331347425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1821c78e87bcc4bb1fc026beba304f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxButtonHighlight: {fileID: 7030256248376843842, guid: 6b682321d5a7447428227ee08f3e0a37, type: 3}
+  sfxButtonClick: {fileID: 7533822388419498217, guid: 9d8fd361535e63b4aabe3f39c069f964, type: 3}
 --- !u!1 &1560293520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,8 +1809,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
