@@ -10,6 +10,7 @@ public class SettingsController : MonoBehaviour
     public Slider brightnessSlider;
     public TextMeshProUGUI brightnessMeter;
 
+
     public Toggle debug;
 
     private void Start()

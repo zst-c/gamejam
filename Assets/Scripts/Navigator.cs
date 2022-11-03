@@ -8,7 +8,7 @@ public static class Scenes
 {
     public const string MainMenuScene = "Main Menu";
     public const string Level1Scene = "Level 1";
-    public const string TutorialScene = "T1 Choose Your Name";
+    public const string NameScene = "EnterNameScene";
 }
 
 public class Navigator
