@@ -15,20 +15,25 @@ public class MemBackend
         _grid = grid;
         foreach (var cell in _cells)
         {
-            var cellView = new GameObject("Cell").AddComponent<VerticalLayoutGroup>();
+            var cellObj = new GameObject("Cell");
+            var cellView = cellObj.AddComponent<VerticalLayoutGroup>();
             cellView.spacing = 10f;
             cellView.transform.SetParent(grid.transform);
-            var byteView = new GameObject("Byte").AddComponent<HorizontalLayoutGroup>();
+            var byteObj = new GameObject("Byte");
+            var byteView = byteObj.AddComponent<HorizontalLayoutGroup>();
             byteView.spacing = 10f;
             byteView.transform.SetParent(cellView.transform);
+            byteView.GetComponent<RectTransform>().transform.localScale = new Vector3(1f, 1f, 0f);
             for (int i = 0; i < MemCell.BitsLen; i++)
             {
                 var bitView = new GameObject("Bit").AddComponent<TextMeshProUGUI>();
                 bitView.transform.SetParent(byteView.transform);
                 bitView.font = font;
                 bitView.alignment = TextAlignmentOptions.Center;
+                bitView.GetComponent<RectTransform>().transform.localScale = new Vector3(1f, 1f, 0f);
             }
             UpdateCellView(cellView.gameObject, cell);
+            cellView.GetComponent<RectTransform>().transform.localScale = new Vector3(0.75f, 0.75f, 0f);
 
             var label = new GameObject("Label").AddComponent<TextMeshProUGUI>();
             label.transform.SetParent(cellView.transform);
@@ -36,6 +41,7 @@ public class MemBackend
             label.fontSize = 15f;
             label.alignment = TextAlignmentOptions.Center;
             label.text = cell.Label;
+            label.GetComponent<RectTransform>().transform.localScale = new Vector3(1.25f, 1.25f, 0f);
         }
     }
 
