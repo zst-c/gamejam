@@ -13,14 +13,14 @@ public class SettingsController : MonoBehaviour
 
     private void Start()
     {
-        SettingsManager.Instance.Volume = (int)volumeSlider.value;
+        volumeSlider.GetComponent<Slider>().value = SettingsManager.Instance.Volume;
         volumeSlider.onValueChanged.AddListener(delegate(float value)
         {
             SettingsManager.Instance.Volume = (int)value;
             UpdateText();
         });
 
-        SettingsManager.Instance.Brightness = (int)brightnessSlider.value;
+        brightnessSlider.GetComponent<Slider>().value = SettingsManager.Instance.Brightness;
         brightnessSlider.onValueChanged.AddListener(delegate(float value)
         {
             SettingsManager.Instance.Brightness = (int)value;
