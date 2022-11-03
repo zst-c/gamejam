@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 190699995}
   - component: {fileID: 190699998}
   m_Layer: 5
-  m_Name: ButtonCancel
+  m_Name: ButtonOk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 1331347427}
   - component: {fileID: 1331347430}
   m_Layer: 5
-  m_Name: ButtonOk
+  m_Name: ButtonCancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1782,7 +1782,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choose your name
+  m_text: Enter your name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db1f6881db51b8f4d9ac91b6f80b3585, type: 2}
   m_sharedMaterial: {fileID: 7634127549213884404, guid: db1f6881db51b8f4d9ac91b6f80b3585, type: 2}
@@ -2093,6 +2093,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoryGrid: {fileID: 120014421}
   font: {fileID: 11400000, guid: db1f6881db51b8f4d9ac91b6f80b3585, type: 2}
+  inputField: {fileID: 1025147783}
+  buttonOkText: {fileID: 306616375}
+  buttonCancelText: {fileID: 1179354990}
 --- !u!1001 &4787653665656027595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2211,6 +2214,14 @@ PrefabInstance:
     - target: {fileID: 4787653667020431671, guid: 6fbe61e4c84ee594c893d69ef5514fcb, type: 3}
       propertyPath: m_Name
       value: MemoryView
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787653667209430818, guid: 6fbe61e4c84ee594c893d69ef5514fcb, type: 3}
+      propertyPath: m_Spacing.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787653667209430818, guid: 6fbe61e4c84ee594c893d69ef5514fcb, type: 3}
+      propertyPath: m_Spacing.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4787653667209430819, guid: 6fbe61e4c84ee594c893d69ef5514fcb, type: 3}
       propertyPath: m_LayoutPriority

@@ -9,8 +9,6 @@ public class NewGameScene : MemoryScene
     public TextMeshProUGUI buttonOkText;
     public TextMeshProUGUI buttonCancelText;
 
-    private string _text = "";
-
     protected override string[] Labels
     {
         get
@@ -25,14 +23,11 @@ public class NewGameScene : MemoryScene
         base.Start();
         inputField.Select();
         inputField.onValueChanged.AddListener(UpdateUI);
-        Debug.Log("started");
     }
 
     private void UpdateUI(string text)
     {
-        _text = text;
         int byteIndex = text.Length / MemCell.BitsLen;
-
 
         {
             string subStr = Substring(text, 0);
