@@ -27,6 +27,7 @@ public class MemBackend
                 var bitView = new GameObject("Bit").AddComponent<TextMeshProUGUI>();
                 bitView.transform.SetParent(byteView.transform);
                 bitView.font = font;
+                bitView.alignment = TextAlignmentOptions.Center;
             }
             UpdateCellView(cellView.gameObject, cell);
 

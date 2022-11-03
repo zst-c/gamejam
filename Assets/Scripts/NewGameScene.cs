@@ -1,20 +1,11 @@
-﻿using System;
-using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class NewGameScene : MonoBehaviour
+﻿public class NewGameScene : MemoryScene
 {
-    public GridLayoutGroup memoryGrid;
-    public TMP_FontAsset font;
-
-    private MemBackend _memory;
-
-    private void Start()
+    protected override string[] Labels
     {
-        string[] labels = { "usnm [0]", "usnm [1]", "btn_Cc", "btn_Ok" };
-        _memory = new MemBackend(labels, memoryGrid, font);
+        get
+        {
+            var labels = new[] { "usnm [0]", "usnm [1]", "btn_Cc", "btn_Ok" };
+            return labels;
+        }
     }
-
-
 }
