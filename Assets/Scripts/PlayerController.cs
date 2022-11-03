@@ -31,6 +31,11 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetFloat("Horizontal", movement.x);
         playerAnimator.SetFloat("Vertical", movement.y);
         playerAnimator.SetFloat("Speed", movement.sqrMagnitude);
+        if (Mathf.Abs(movement.x) == 1 || Mathf.Abs(movement.y) == 1)
+        {
+            playerAnimator.SetFloat("LastHorizontal", movement.x);
+            playerAnimator.SetFloat("LastVertical", movement.y);
+        }
 
         if (Vector3.Distance(transform.position, movePoint.position) <= 0.05f)
         {
@@ -39,6 +44,7 @@ public class PlayerController : MonoBehaviour
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(movement.x, 0, 0), .2f, whatLayerStopsMovement))
                 {
                     movePoint.position += new Vector3(movement.x, 0, 0);
+                    // playerAnimator.SetFloat("LastHorizontal", movement.x);
                 }
             }
             else if (Mathf.Abs(movement.y) == 1)
@@ -46,6 +52,7 @@ public class PlayerController : MonoBehaviour
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0, movement.y, 0), .2f, whatLayerStopsMovement))
                 {
                     movePoint.position += new Vector3(0, movement.y, 0);
+                    // playerAnimator.SetFloat("LastVertical", movement.y);
                 }
             }
         }
