@@ -10,6 +10,7 @@ public class SettingsController : MonoBehaviour
     public Slider brightnessSlider;
     public TextMeshProUGUI brightnessMeter;
 
+    public Toggle debug;
 
     private void Start()
     {
@@ -28,6 +29,13 @@ public class SettingsController : MonoBehaviour
         });
 
         UpdateText();
+
+        debug.GetComponent<Toggle>().isOn = SettingsManager.Instance.Debug;
+        debug.onValueChanged.AddListener(delegate(bool isChecked){
+            SettingsManager.Instance.Debug = isChecked;
+            debug.GetComponent<Toggle>().isOn = SettingsManager.Instance.Debug;
+        });
+
         volumeSlider.Select();
     }
 
