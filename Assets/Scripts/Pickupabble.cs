@@ -8,6 +8,7 @@ public class Pickupabble : MonoBehaviour
     [SerializeField] GameObject pickupSfx = null;
     PlayerInventory inventory;
     [SerializeField] GameObject itemButton;
+    public Level1Controller levelController;
 
     private void Start()
     {
@@ -22,6 +23,7 @@ public class Pickupabble : MonoBehaviour
             Instantiate(pickupSfx, transform.position, Quaternion.identity);
             for (int i = 0; i < inventory.slots.Length; i++)
             {
+                levelController.PickUpBerry();
                 if (!inventory.isFull[i])
                 {
                     inventory.isFull[i] = true;
@@ -29,10 +31,7 @@ public class Pickupabble : MonoBehaviour
                     Destroy(gameObject);
                     break;
                 }
-                else
-                {
-                    // DO THE OVERFLOW
-                }
+                Destroy(gameObject);
             }
         }
     }
