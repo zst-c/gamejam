@@ -26,7 +26,17 @@ public class PlayerController : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, playerMovementSpeed * Time.deltaTime);
+        Vector3 moveAmount = Vector3.MoveTowards(transform.position, movePoint.position, playerMovementSpeed * Time.deltaTime);
+        transform.position = moveAmount;
+
+        if (transform.position == movePoint.position)
+        {
+            playerAnimator.SetBool("isMoving", false);
+        }
+        else
+        {
+            playerAnimator.SetBool("isMoving", true);
+        }
 
         playerAnimator.SetFloat("Horizontal", movement.x);
         playerAnimator.SetFloat("Vertical", movement.y);
@@ -44,8 +54,7 @@ public class PlayerController : MonoBehaviour
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(movement.x, 0, 0), .2f, whatLayerStopsMovement))
                 {
                     movePoint.position += new Vector3(movement.x, 0, 0);
-                    // playerAnimator.SetFloat("LastHorizontal", movement.x);
-                    playerAnimator.SetBool("isMoving", true);
+
                 }
             }
             else if (Mathf.Abs(movement.y) == 1)
@@ -53,8 +62,6 @@ public class PlayerController : MonoBehaviour
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0, movement.y, 0), .2f, whatLayerStopsMovement))
                 {
                     movePoint.position += new Vector3(0, movement.y, 0);
-                    // playerAnimator.SetFloat("LastVertical", movement.y);
-                    playerAnimator.SetBool("isMoving", true);
                 }
             }
             else
