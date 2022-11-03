@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
                 {
                     movePoint.position += new Vector3(movement.x, 0, 0);
                     // playerAnimator.SetFloat("LastHorizontal", movement.x);
+                    playerAnimator.SetBool("isMoving", true);
                 }
             }
             else if (Mathf.Abs(movement.y) == 1)
@@ -53,7 +54,12 @@ public class PlayerController : MonoBehaviour
                 {
                     movePoint.position += new Vector3(0, movement.y, 0);
                     // playerAnimator.SetFloat("LastVertical", movement.y);
+                    playerAnimator.SetBool("isMoving", true);
                 }
+            }
+            else
+            {
+                playerAnimator.SetBool("isMoving", false);
             }
         }
     }
