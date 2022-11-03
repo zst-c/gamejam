@@ -1,18 +1,18 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PersistentScene : MonoBehaviour
 {
     private void Start()
     {
         Navigator.Instance.LoadScene(Scenes.MainMenuScene);
+        InputSystem.DisableDevice(Mouse.current);
+        Cursor.visible = false;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-        {
             Navigator.Instance.ToggleSettings();
-        }
     }
 }
