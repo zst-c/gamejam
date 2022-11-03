@@ -9,6 +9,7 @@ public class KeyRecolourGreenKey : MonoBehaviour{
 			var redKey = PrefabUtility.LoadPrefabContents("Assets/Prefabs/Full Red Key.prefab");
 			redKey.transform.parent = gameObject.transform.parent;
 			redKey.transform.position = gameObject.transform.position;
+			redKey.transform.localScale = gameObject.transform.localScale;
 			Destroy(gameObject);
 		}
 	}
