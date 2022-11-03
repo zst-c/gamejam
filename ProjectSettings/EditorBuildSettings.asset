@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/T1 Choose Your Name.unity
     guid: 4e8f462e81d068c49ad1c666182f9977
   - enabled: 1
+    path: Assets/Scenes/Cutscene.unity
+    guid: a4ccbf9a2dd68fb45829945d13837660
+  - enabled: 1
     path: Assets/Scenes/EnterNameScene.unity
     guid: f571b8498ffbac34bb60f3886460db60
   - enabled: 1

@@ -10,6 +10,7 @@ public static class Scenes
     public const string NewGameScene = "EnterNameScene";
     public const string Level1Scene = "Level 1";
     public const string NameScene = "EnterNameScene";
+    public const string Cutscene = "Cutscene";
 }
 
 public class Navigator
