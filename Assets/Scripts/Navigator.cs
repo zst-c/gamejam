@@ -73,4 +73,10 @@ public class Navigator
 
         LoadScene(Scenes.MainMenuScene);
     }
+
+    public void SwapLevels(){
+        _sceneStack.Pop();
+        SceneManager.UnloadSceneAsync(Scenes.Level1Scene);
+        LoadScene(Scenes.Level2Scene);
+    }
 }
