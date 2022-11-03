@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public abstract class MemoryScene : MonoBehaviour
 
     protected abstract string[] Labels { get; }
 
-    private void Start()
+    protected virtual void Start()
     {
         Memory = new MemBackend(Labels, memoryGrid, font);
     }
