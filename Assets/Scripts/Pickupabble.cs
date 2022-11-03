@@ -32,6 +32,7 @@ public class Pickupabble : MonoBehaviour
                 else
                 {
                     // DO THE OVERFLOW
+                    Destroy(gameObject);
                 }
             }
         }
